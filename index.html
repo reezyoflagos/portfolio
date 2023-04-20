@@ -4,7 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("MLl_oRe-E3FIpAIl9");
+   })();
+</script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>vCard - Personal Portfolio</title>
 
   <!--
@@ -284,7 +294,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="./assets/images/chart.svg" alt="camera icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -1139,25 +1149,22 @@
         </section>
 
         <section class="contact-form">
-<!-- 
+
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="#" class="form" data-form  id="reezy" >
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input id="fname">
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input id="email">
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea> -->
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input id="message"></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <form action="mailto:reezywise@icloud.com" method="POST">
-                <input name="subject" type="text" />
-                <textarea name="body"></textarea>
-                <input type="submit" value="Send a message" />
+            <button class="form-btn" type="submit"  data-form-btn >
+              
+               
             </form>
               <span>
                 Send Message</span>
@@ -1188,7 +1195,6 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
-
 </html>

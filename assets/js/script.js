@@ -130,7 +130,6 @@ for (let i = 0; i < formInputs.length; i++) {
     } else {
       formBtn.setAttribute("disabled", "");
     }
-
   });
 }
 
@@ -157,3 +156,26 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.getElementById('reezy').onsubmit = (e) =>{
+  e.preventDefault(e)
+  const params= {
+   from_name:document.getElementById('fname').value,
+   email_id:document.getElementById('email').value,
+   message:document.getElementById('message').value
+ 
+  }
+  const serviceId="service_u8cgvcd"
+ const templateId="template_ewpz97w"
+ emailjs.send(serviceId,templateId,params).then(
+   res=>{
+ document.getElementById('fname').value =" "
+ document.getElementById('lname').value =" "
+ document.getElementById('email').value =" "
+ document.getElementById('phone').value =" "
+ document.getElementById('message').value =" "
+ console.log(res)
+ alert("Message sent successfully")
+ })
+ .catch(err=>console.log(err));
+ }
